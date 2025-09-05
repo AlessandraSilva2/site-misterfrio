@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Assistência Técnica Mister Frio</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="imagens/assistencia64.jpg" type="image/png" sizes="64x64">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <a href="https://wa.me/5571987996928" target="_blank" rel="noopener noreferrer" class="whatsapp-float">
+        <img src="imagens/whatsapp.png" alt="WhatsApp" />
+    </a>
+
+
+    <header>
+        <nav>
+            <div class="menu-toggle" id="mobile-menu">☰</div>
+            <ul>
+                <li><a href="#quem-somos">Quem Somos</a></li>
+                <li><a href="#marcas">Marcas</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#diferenciais">Diferenciais</a></li>
+                <li><a href="#feedback">FeedBack</a></li>
+                <li><a href="#orcamentos">Orçamentos</a></li>
+                <li><a href="#localizacao">Localização</a></li>
+            </ul>
+        </nav>
+
+        <div class="header-conteudo">
+            <h1>Assistência Técnica <br /> Especializada</h1>
+            <h2 id="typing-text">Aqui você encontra a ajuda que precisa,<br />suporte e assistência técnica.</h2>
+        </div>
+    </header>
+
+    <script>
+  const menuToggle = document.getElementById('mobile-menu');
+  const nav = document.querySelector('nav');
+  const menuLinks = document.querySelectorAll('nav ul li a');
+
+  // Abre ou fecha menu
+  menuToggle.addEventListener('click', () => {
+    nav.classList.toggle('active');
+  });
+
+  // Fecha ao clicar em qualquer link
+  menuLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      nav.classList.remove('active');
+    });
+  });
+</script>
+
+
+
+
+    <script>
+        const element = document.getElementById('typing-text');
+        const fullText = element.innerHTML;
+        element.innerHTML = '';
+
+        let i = 0;
+        let typing = true;
+
+        function typeAndDelete() {
+            if (typing) {
+                if (i < fullText.length) {
+                    if (fullText.substring(i, i + 4) === '<br>') {
+                        element.innerHTML += '<br>';
+                        i += 4;
+                    } else if (fullText.substring(i, i + 5) === '<br />') {
+                        element.innerHTML += '<br />';
+                        i += 5;
+                    } else {
+                        element.innerHTML += fullText.charAt(i);
+                        i++;
+                    }
+                    setTimeout(typeAndDelete, 50);
+                } else {
+                    typing = false;
+                    setTimeout(typeAndDelete, 1500);
+                }
+            } else {
+                // Apagar letra por letra
+                if (element.innerHTML.length > 0) {
+                    // Remove último caractere ou tag <br>
+                    let currentHTML = element.innerHTML;
+                    if (currentHTML.endsWith('<br>')) {
+                        element.innerHTML = currentHTML.slice(0, -4);
+                    } else if (currentHTML.endsWith('<br />')) {
+                        element.innerHTML = currentHTML.slice(0, -5);
+                    } else {
+                        element.innerHTML = currentHTML.slice(0, -1);
+                    }
+                    setTimeout(typeAndDelete, 30);
+                } else {
+                    typing = true;
+                    i = 0;
+                    setTimeout(typeAndDelete, 500);
+                }
+            }
+        }
+
+        typeAndDelete();
+    </script>
+
+    <main>
+
+        <section id="quem-somos" class="secao quem-somos">
+            <h2 class="titulo-secao">Quem Somos</h2>
+
+            <div class="bloco-hover">
+                <div class="conteudo-quem-somos">
+                    <div class="imagem-container">
+                        <img src="imagens/modelo.png" alt="modelo" class="imagem-quem-somos">
+                    </div>
+
+                    <div class="texto-container">
+                        <p><strong>Com um legado de mais de 65 anos no setor de refrigeração.</strong></p>
+
+                        <p><strong>Somos especialistas em Refrigeração, Climatização e Elétrica.</strong></p>
+
+                        <p>
+                            A Assistência Técnica <strong>MISTER FRIO</strong> oferece serviços especializados de
+                            conserto,
+                            instalação e manutenção a domicílio para
+                            <strong>refrigeradores, freezers, expositor, vitrine refrigerada, balcão, adegas de vinho,
+                                ar-condicionado, lava e seca, máquinas de lavar roupas, lava-louças e
+                                micro-ondas</strong>.
+                        </p>
+
+                        <p>
+                            Nossa equipe é formada por técnicos altamente capacitados, que atuam com
+                            <strong>compromisso, agilidade e foco na qualidade e segurança do serviço.</strong>
+                        </p>
+
+                        <p>Atuamos com as principais marcas do mercado, entre elas:</p>
+
+                        <p>
+                            <strong>
+                                Electrolux, Brastemp, Consul, LG, Samsung, Philco, Panasonic, Midea,
+                                Continental, General Electric, Viking, Carrier, Bosch, Rheem, Springer, Gree, Elgin,
+                                Komeco, York, Suryha, Totaline, Daikin e Mitsubishi Electric.
+                            </strong>
+                        </p>
+
+                        <p>
+                            Oferecemos atendimento especializado para refrigeradores
+                            <strong>Side by Side e French Door</strong>, realizando manutenção preventiva e corretiva
+                            com peças
+                            originais.
+                        </p>
+
+                        <p>
+                            Também prestamos suporte técnico qualificado para
+                            <strong>Chiller, Fancoil, Rooftop, Centrais de Ar e equipamentos SELF.</strong>
+                        </p>
+
+                        <p>
+                            <strong>Conte com o MISTER FRIO para garantir o melhor desempenho e a durabilidade dos seus
+                                equipamentos, com confiança e excelência.</strong>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="marcas" class="secao marcas">
+            <h2 class="titulo-secao">Marcas</h2>
+
+            <div class="grade-marcas">
+                <img src="imagens/carrier.png" alt="Carrier">
+                <img src="imagens/brastemp.png" alt="Brastemp">
+                <img src="imagens/electrolux.png" alt="Electrolux">
+                <img src="imagens/consul.png" alt="Consul">
+                <img src="imagens/rheem.png" alt="Rheem">
+                <img src="imagens/midea.png" alt="Midea">
+                <img src="imagens/lg.png" alt="LG">
+                <img src="imagens/general-eletric.png" alt="General Electric">
+                <img src="imagens/springer.png" alt="Springer">
+                <img src="imagens/samsung.png" alt="Samsung">
+                <img src="imagens/continental.png" alt="Continental">
+                <img src="imagens/philco.png" alt="Philco">
+            </div>
+
+            <div class="grade-marcas">
+                <img src="imagens/panasonic.png" alt="Panasonic">
+                <img src="imagens/viking.png" alt="Viking">
+                <img src="imagens/gree.png" alt="Gree">
+                <img src="imagens/fujitsu.png" alt="Fujitsu">
+                <img src="imagens/elgin.png" alt="Elgin">
+                <img src="imagens/komeco.png" alt="Komeco">
+                <img src="imagens/hitachi.png" alt="Hitachi">
+                <img src="imagens/york.png" alt="York">
+                <img src="imagens/suryha.png" alt="Suryha">
+                <img src="imagens/totaline.png" alt="Totaline">
+                <img src="imagens/daikin.png" alt="Daikin">
+                <img src="imagens/mitsubichi-electric.png" alt="Mitsubishi Electric">
+            </div>
+        </section>
+
+        <section id="servicos" class="secao servicos">
+            <h2 class="titulo-secao">Serviços</h2>
+
+            <div class="grade-servicos">
+
+                <div class="card-servico">
+                    <img src="imagens/geladeira-duplex.png" alt="Geladeira Duplex">
+                    <h3>Geladeiras</h3>
+                    <p>
+                        Contamos com técnicos especializados para garantir que sua geladeira funcione perfeitamente,
+                        mantendo seus alimentos frescos e seguros. Atuamos nas áreas essenciais para reparar falhas
+                        e otimizar o desempenho.
+                    </p>
+                </div>
+
+                <div class="card-servico">
+                    <img src="imagens/freezer-vitrine-balcao-.png" alt="Freezer Vitrine Balcão">
+                    <h3>Freezer - Expositor - Vitrine - Balcão</h3>
+                    <p>
+                        Oferecemos serviços completos de conserto para freezer, expositor, vitrine refrigerada e balcão,
+                        garantindo a manutenção da temperatura ideal para conservação de alimentos e produtos sensíveis.
+                    </p>
+                </div>
+
+                <div class="card-servico">
+                    <img src="imagens/side-by-side-e-french-door.png" alt="Side By Side e French Door">
+                    <h3>Refrigeradores Side By Side e French Door</h3>
+                    <p>
+                        Serviços especializados para esses modelos modernos que exigem atenção técnica em múltiplas
+                        áreas,
+                        garantindo eficiência e durabilidade.
+                    </p>
+                </div>
+
+                <div class="card-servico">
+                    <img src="imagens/adega.png" alt="Adegas">
+                    <h3>Adegas Climatizadoras</h3>
+                    <p>
+                        Manutenção completa em adegas climatizadoras, atuando com precisão nas áreas elétrica, mecânica
+                        e de refrigeração para conservação ideal dos vinhos.
+                    </p>
+                </div>
+
+                <div class="card-servico">
+                    <img src="imagens/chiller-fancoil-self-rooftop.png" alt="Chiller, Fancoil, Self, Rooftop">
+                    <h3>Fancoil - Central - Self - Rooftop</h3>
+                    <p>
+                        Especialistas em climatização de médio e grande porte, com domínio total das áreas que compõem
+                        esses sistemas, garantindo conforto térmico e economia.
+                    </p>
+                </div>
+
+                <div class="card-servico">
+                    <img src="imagens/ar-condicionados.png" alt="Ar-condicionado">
+                    <h3>Ar Condicionados</h3>
+                    <p>
+                        Técnicos autorizados e treinados pelas marcas. Atuamos com excelência na área elétrica e de
+                        climatização, assegurando durabilidade e segurança.
+                    </p>
+                </div>
+
+                <div class="card-servico">
+                    <img src="imagens/maquina-de-lavar-lava-e-seca-lava-louca.png" alt="Máquinas Lava e Seca">
+                    <h3>Máquina de Lavar - Lava e Seca - Lava-louças</h3>
+                    <p>
+                        Manutenção completa com foco técnico em todas as áreas do funcionamento. Atendemos modelos
+                        nacionais e importados.
+                    </p>
+                </div>
+
+                <div class="card-servico">
+                    <img src="imagens/micro-ondas.png" alt="Micro-ondas">
+                    <h3>Micro-ondas</h3>
+                    <p>
+                        Conserto completo com segurança e precisão para que seu aparelho funcione de forma eficaz
+                        e segura.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="diferenciais" class="secao diferenciais">
+            <h2 class="titulo-secao">Diferenciais</h2>
+
+            <div class="grade-diferenciais">
+                <div class="card-diferencial pecas-originais">
+                    <img src="imagens/pecas-originais.png" alt="Peças Originais">
+                    <h3>
+                        <span class="pecas">Peças</span><br>
+                        <span class="originais">Originais</span>
+                    </h3>
+                </div>
+
+                <div class="card-diferencial equipe-especializada">
+                    <img src="imagens/equipe-especializada.png" alt="Equipe Especializada">
+                    <h3>
+                        <span class="equipe">Equipe</span><br>
+                        <span class="especializada">Especializada</span>
+                    </h3>
+                </div>
+
+                <div class="card-diferencial conserto-casa">
+                    <img src="imagens/consertamos-na-sua-casa.png" alt="Consertamos na sua casa">
+                    <h3>
+                        <span class="consertamos">Consertamos</span><br>
+                        <span class="na-casa">na sua casa</span>
+                    </h3>
+                </div>
+
+                <div class="card-diferencial garantia">
+                    <img src="imagens/garantia.png" alt="Garantia">
+                    <h3>
+                        <span class="garantia">Garantia</span>
+                    </h3>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="feedback" class="secao feedback">
+            <h2 class="titulo-secao">FeedBack</h2>
+            <h3>O que dizem nossos clientes:</h3>
+
+            <div class="avaliacao-google">
+                <h3>EXCELENTE</h3>
+                <div class="estrelas">★★★★★</div>
+                <p>Com base em <strong>38 avaliações</strong></p>
+                <img class="google-2" src="imagens/google2.png">
+                <div class="logo-google"></div>
+            </div>
+
+            <div class="grade-feedback">
+                <div class="card-feedback">
+                    <div class="header-feedback">
+                        <img class="cliente-1" src="imagens/cliente-1.png">
+                        <div class="info-nome">
+                            <h4>Maicon Matos</h4>
+                            <span class="tempo-feedback">3 meses atrás</span>
+                        </div>
+                    </div>
+                    <div class="estrelas">★★★★★</div>
+                    <p>Os caras são brabos demais, super profissionais! Entendem realmente do assunto, serviço de
+                        qualidade com preço justo, estou super feliz com meu gelando! Tamo junto Ice Refrigeração.</p>
+                    <a href="https://wa.me/71987996928" target="_blank" rel="noopener noreferrer">
+                        Consulte mais informações
+                    </a>
+                </div>
+
+                <div class="card-feedback">
+                    <div class="header-feedback">
+                        <img class="cliente-1" src="imagens/cliente-2.png">
+                        <div class="info-nome">
+                            <h4>Fabiola Sansigolo</h4>
+                            <span class="tempo-feedback">3 meses atrás</span>
+                        </div>
+                    </div>
+                    <div class="estrelas">★★★★★</div>
+                    <p>Foram excelentes! Vieram pontualmente na hora marcada e consertaram meu refrigerador. Super
+                        recomendo!</p>
+                    <a href="https://wa.me/71987996928" target="_blank" rel="noopener noreferrer">
+                        Consulte mais informações
+                    </a>
+                </div>
+
+                <div class="card-feedback">
+                    <div class="header-feedback">
+                        <img class="cliente-1" src="imagens/cliente-3.png">
+                        <div class="info-nome">
+                            <h4>Mateus Ramos Souza</h4>
+                            <span class="tempo-feedback">8 meses atrás</span>
+                        </div>
+                    </div>
+                    <div class="estrelas">★★★★★</div>
+                    <p>Profissionais ágeis e práticos… Resolveram o problema da minha geladeira, sem enrolação…
+                        Recomendo com certeza.</p>
+                    <a href="https://wa.me/71987996928" target="_blank" rel="noopener noreferrer">
+                        Consulte mais informações
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="orcamentos" class="secao orcamentos">
+            <h2 class="titulo-secao">Orçamentos</h2>
+
+            <div class="redes-sociais">
+                <a href="https://www.facebook.com/people/MR-ICE-Refrigera%C3%A7%C3%A3o/61563352092047/" target="_blank">
+                    <img src="imagens/facebook.png" alt="Facebook" class="facebook">
+                </a>
+                <a href="https://www.instagram.com/mr.icerefrigeracao" target="_blank">
+                    <img src="imagens/instagram.png" alt="Instagram">
+                </a>
+            </div>
+            </div>
+
+            <p class="texto-central">
+                <strong>Contate-nos e tenha o suporte de especialistas comprometidos com a excelência e rapidez no
+                    serviço!</strong>
+            </p>
+        </section>
+
+
+        <section id="localizacao" class="secao localizacao">
+            <h2 class="titulo-secao">Localização</h2>
+            <div class="mapa-container">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3835.2347127750717!2d-38.35843048467295!3d-12.906651750658227!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85a3c71052d72c9d%3A0xa53d94755c743776!2sMISTER%20FRIO%20REFRIGERA%C3%87%C3%83O!5e0!3m2!1spt-BR!2sbr!4v1691829583160!5m2!1spt-BR!2sbr"
+                    width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Mister Frio Refrigeração</p>
+    </footer>
+</body>
+
+</html>
