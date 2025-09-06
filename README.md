@@ -19,7 +19,4 @@ HTML
 CSS
 JavaScript
 
-Observações:
-Este projeto reflete aprendizado e prática, mostrando que é possível criar um site funcional mesmo sendo o primeiro desenvolvimento completo.
-
 Obrigada por visitar meu repositório!
