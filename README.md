@@ -20,3 +20,8 @@ CSS
 JavaScript
 
 Obrigada por visitar meu repositório!
+
+Licença
+
+Este projeto está licenciado sob os termos da Licença MIT.  
+Veja o arquivo [LICENSE](./LICENSE) para mais detalhes.
